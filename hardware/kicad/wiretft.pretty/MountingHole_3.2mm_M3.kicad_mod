@@ -1,0 +1,8 @@
+(footprint "MountingHole_3.2mm_M3" (version 20221018) (generator pcbnew)
+(layer "F.Cu")
+(attr exclude_from_pos_files exclude_from_bom)
+(fp_text reference "REF**" (at 0 -4) (layer "F.SilkS") hide (effects (font (size 0.8 0.8) (thickness 0.12))) (tstamp "7af05e76-2c0b-5b1b-8791-42629c7eb8cc"))
+(fp_text value "MountingHole_3.2mm_M3" (at 0 0) (layer "F.Fab") hide (effects (font (size 0.8 0.8) (thickness 0.12))) (tstamp "62b5f66e-e3fd-5f02-81f8-4ffe3ff836bc"))
+(fp_circle (center 0 0) (end 2.9 0) (stroke (width 0.12) (type solid)) (fill none) (layer "F.SilkS") (tstamp "566fe067-b83b-5279-ab53-6083e596e41f"))
+(pad "" np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers "*.Cu" "*.Mask") (tstamp "5b772398-6ab7-58b5-98da-1566b97bd505"))
+)

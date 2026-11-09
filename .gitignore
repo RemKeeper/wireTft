@@ -1,0 +1,12 @@
+build/
+sdkconfig
+sdkconfig.old
+sdkconfig.local
+managed_components/
+dependencies.lock
+__pycache__/
+*.pyc
+.wrangler/
+node_modules/
+# Third-party Altium reference, not part of this project.
+阿里云2.4寸彩色电子价签屏幕转接板/

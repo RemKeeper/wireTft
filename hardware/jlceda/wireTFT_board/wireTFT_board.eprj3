@@ -1,0 +1,72 @@
+{
+  "name": "wireTFT_board",
+  "owner_uuid": "8c59db96a20340092a4563103fa84d7c",
+  "creator_uuid": "8c59db96a20340092a4563103fa84d7c",
+  "created_at": "2026-10-27 10:08:59",
+  "updated_at": "2026-10-27 10:08:59",
+  "modifier_uuid": "8c59db96a20340092a4563103fa84d7c",
+  "content": "",
+  "archive": false,
+  "cbb_project": 0,
+  "thumb": "",
+  "ticket": 1,
+  "g_ticket": 1,
+  "boards": [],
+  "block_symbol_attrs_groups": {},
+  "default_sheet": "",
+  "branch_uuid": "",
+  "pcb_count": 1,
+  "format": "folder",
+  "profile": {
+    "boards": {
+      "02c283c9bb0d8f0f": {
+        "uuid": "02c283c9bb0d8f0f",
+        "title": "Board1",
+        "zIndex": 1
+      }
+    },
+    "schematics": {
+      "0c7e744757d96b9e": {
+        "uuid": "0c7e744757d96b9e",
+        "name": "Schematic1",
+        "board": "02c283c9bb0d8f0f",
+        "source": "",
+        "version": "1793607937448",
+        "updateTime": 1793607937448
+      }
+    },
+    "sheets": {
+      "0f38b3bfaf36757f": {
+        "uuid": "0f38b3bfaf36757f",
+        "title": "P1",
+        "schematic_uuid": "0c7e744757d96b9e",
+        "zIndex": 1,
+        "source": "",
+        "version": "1793607937448",
+        "updateTime": 1793607937448
+      }
+    },
+    "pcbs": {
+      "6db1d67ef8777efc": {
+        "uuid": "6db1d67ef8777efc",
+        "title": "PCB1",
+        "board": "02c283c9bb0d8f0f",
+        "parent_uuid": "",
+        "source": "",
+        "version": "1793607899665",
+        "updateTime": 1793607899665
+      }
+    },
+    "panels": {},
+    "blockSymbols": {},
+    "owner": {
+      "uuid": "8c59db96a20340092a4563103fa84d7c"
+    },
+    "simSchematics": {},
+    "simulations": {}
+  },
+  "config": {
+    "defaultSheet": "",
+    "settings": {}
+  }
+}

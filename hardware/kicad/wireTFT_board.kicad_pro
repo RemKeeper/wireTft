@@ -1,0 +1,23 @@
+{
+  "board": {
+    "design_settings": {
+      "rules": {
+        "min_clearance": 0.2,
+        "min_track_width": 0.2,
+        "min_via_diameter": 0.6,
+        "min_through_hole_diameter": 0.3,
+        "min_copper_edge_clearance": 0.3
+      }
+    }
+  },
+  "meta": {
+    "filename": "wireTFT_board.kicad_pro",
+    "version": 1
+  },
+  "sheets": [
+    [
+      "b6c40528-2eb2-5c59-81c5-05b3d6044f9c",
+      ""
+    ]
+  ]
+}

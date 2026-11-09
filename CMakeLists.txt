@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.16)
+set(ARDUINO_COMPONENT_PATH "" CACHE PATH "Arduino-ESP32 3.3.12 component directory")
+set(ARDUINO_GFX_PATH "" CACHE PATH "Arduino_GFX 1.6.3 source directory")
+if(NOT ARDUINO_COMPONENT_PATH OR NOT ARDUINO_GFX_PATH)
+    message(FATAL_ERROR "Pass -DARDUINO_COMPONENT_PATH and -DARDUINO_GFX_PATH. See README.")
+endif()
+set(EXTRA_COMPONENT_DIRS "${ARDUINO_COMPONENT_PATH}")
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(wireTFT)
+
+# IDF 5.5 HTTP server has no bind-address option. Build an IPv4-only copy
+# of its listener; the application's lwip_bind wrapper scopes it to STA IP.
+idf_component_get_property(HTTP_TARGET esp_http_server COMPONENT_LIB)
+get_target_property(HTTP_SOURCES ${HTTP_TARGET} SOURCES)
+set(HTTP_ORIGINAL "$ENV{IDF_PATH}/components/esp_http_server/src/httpd_main.c")
+file(READ "${HTTP_ORIGINAL}" HTTP_SOURCE)
+string(REPLACE "#if CONFIG_LWIP_IPV6" "#if 0 /* wireTFT HTTP is IPv4-only */" HTTP_SOURCE "${HTTP_SOURCE}")
+set(HTTP_COPY "${CMAKE_BINARY_DIR}/httpd_main_ipv4.c")
+file(WRITE "${HTTP_COPY}" "${HTTP_SOURCE}")
+list(REMOVE_ITEM HTTP_SOURCES "${HTTP_ORIGINAL}" "src/httpd_main.c")
+set_property(TARGET ${HTTP_TARGET} PROPERTY SOURCES "${HTTP_SOURCES};${HTTP_COPY}")
+target_include_directories(${HTTP_TARGET} PRIVATE "$ENV{IDF_PATH}/components/esp_http_server/src")

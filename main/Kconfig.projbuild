@@ -1,0 +1,8 @@
+menu "wireTFT Wi-Fi"
+config WIRETFT_SSID
+    string "2.4 GHz Wi-Fi SSID"
+    default ""
+config WIRETFT_PASSWORD
+    string "Wi-Fi password"
+    default ""
+endmenu

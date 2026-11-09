@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "wiretft")(type "KiCad")(uri "${KIPRJMOD}/wiretft.pretty")(options "")(descr ""))
+)
